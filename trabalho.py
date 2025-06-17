@@ -1,14 +1,8 @@
-# Trabalho de Algoritmos - Quadrado Mágico
-# Feito por um aluno novato (sem usar True ou False)
-
-# Pede o lado da matriz
 lado = int(input("Digite o lado do quadrado mágico (maior que 2): "))
 
-# Calcula a soma esperada das linhas, colunas e diagonais
 soma_esperada = (lado + lado ** 3) // 2
 print("A soma esperada para cada linha, coluna e diagonal é:", soma_esperada)
 
-# Cria a matriz e a lista de números usados
 matriz = []
 numeros_usados = []
 
@@ -27,7 +21,6 @@ for i in range(lado):
                 print("Número repetido ou inválido. Tente novamente.")
     matriz.append(linha)
 
-# Verifica soma das linhas
 linhas_certas = 1
 for i in range(lado):
     soma = 0
@@ -36,7 +29,6 @@ for i in range(lado):
     if soma != soma_esperada:
         linhas_certas = 0
 
-# Verifica soma das colunas
 colunas_certas = 1
 for j in range(lado):
     soma = 0
@@ -45,17 +37,14 @@ for j in range(lado):
     if soma != soma_esperada:
         colunas_certas = 0
 
-# Verifica diagonal principal
 soma_diagonal1 = 0
 for i in range(lado):
     soma_diagonal1 = soma_diagonal1 + matriz[i][i]
 
-# Verifica diagonal secundária
 soma_diagonal2 = 0
 for i in range(lado):
     soma_diagonal2 = soma_diagonal2 + matriz[i][lado - 1 - i]
 
-# Mostra a matriz
 print("\nMatriz:")
 for i in range(lado):
     print(matriz[i])
