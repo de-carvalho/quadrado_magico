@@ -49,7 +49,6 @@ print("\nMatriz:")
 for i in range(lado):
     print(matriz[i])
 
-# Verifica se é quadrado mágico
 if linhas_certas == 1 and colunas_certas == 1 and soma_diagonal1 == soma_esperada and soma_diagonal2 == soma_esperada:
     print("É um Quadrado Mágico!")
 else:
